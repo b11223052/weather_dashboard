@@ -4,7 +4,7 @@ Created on Sat Nov 15 16:47:29 2025
 
 @author: sasha
 """
-
+import certifi
 import requests
 import streamlit as st
 import pandas as pd
@@ -42,4 +42,5 @@ for element in location["weatherElement"]:
     value = element["time"][0]["parameter"]["parameterName"]
 
     st.write(f"{name}：{value}")
+
 
