@@ -26,7 +26,7 @@ params = {
 }
 
 # 取得資料
-res = requests.get(url, params=params,verify=False)
+res = requests.get(url, params=params)
 data = res.json()
 
 # 解析資料
@@ -42,6 +42,7 @@ for element in location["weatherElement"]:
     value = element["time"][0]["parameter"]["parameterName"]
 
     st.write(f"{name}：{value}")
+
 
 
 
